@@ -11,28 +11,33 @@
             </tr>
         </thead>
         <tbody>
-        {% for i in 0..10 %}            
+    
+
+         {% for todo in todos %}         
             <tr>
-                <th scope="row">{{ i+1 }}</th>
-                <td>Mark</td>
-                <td>Otto</td>
+                <th scope="row">{{todo.id}}</th>
+                <td>{{todo.name}}</td>
+                <td>{{todo.dueDate | date('Y-m-d H:i:s')}}</td>
                 <td>
                     <a href="/" class="btn btn-success">view</a>
                     <a href="/" class="btn btn-default">edit</a>
                     <a href="/" class="btn btn-danger">delete</a>
                 </td>
             </tr>
-        {% endfor %}
+         {% endfor %}
             
         </tbody>
     </table>
+    <div class="row">
+        <a href="/create" class="btn btn-primary btn-lg">Create Todo</a>
+    </div>
 {% endblock %}
 
 {% block stylesheets %}
 
 {% endblock %}
-{% block javascript %}
+{% block javascripts %}
     <script>
-        alert(1234);
+        {# alert(1234); #}
     </script>
 {% endblock %}
