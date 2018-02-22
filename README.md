@@ -8,6 +8,9 @@ A Symfony project created on February 22, 2018, 3:02 am.
 ### install symfony version 3.6
 requirement php 5.6
 [link symfony](https://symfony.com/doc/3.4/setup.html)
+
+---
+
 ![logo](https://symfony.com/images/v5/logos/sf-positive.svg)
 ### Installing & Setting up the Symfony Framework
     php -r "file_put_contents('symfony', file_get_contents('https://symfony.com/installer'));"
