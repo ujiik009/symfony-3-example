@@ -296,7 +296,7 @@ class TodoController extends Controller
         $commit->remove($todo);
         $commit->flush();
         $this->addFlash(
-            'notice',
+            'error',
             'delete To success'
         );
         return $this->redirectToRoute('todo_list');
