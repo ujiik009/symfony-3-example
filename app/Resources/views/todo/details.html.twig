@@ -2,8 +2,20 @@
 
 
 {% block body %}
-    <h1>Detail</h1>
-    {{base_url}}
+    <a href="/" class="btn btn-default"> back To Todo </a>
+   
+    <hr>
+    <h2>{{todo.name}}</h2>
+    <hr>
+    <ul class="list-group">
+		<li class="list-group-item">Category: {{todo.category}} </li>
+		<li class="list-group-item">Prioity: {{todo.prioity}} </li>
+		<li class="list-group-item">Due: <strong>{{todo.dueDate | date('Y-m-d H:i:s')}}</strong> </li>
+	</ul>
+    <p>
+        <h4>{{todo.description}}</h4>
+    </p>
+
 {% endblock %}
 
 
