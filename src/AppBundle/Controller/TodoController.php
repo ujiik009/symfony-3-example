@@ -250,7 +250,7 @@ class TodoController extends Controller
 
             $this->addFlash(
                 'notice',
-                'Todo Added'
+                'Update Todo'
             );
             return $this->redirectToRoute('todo_list');
 
@@ -295,6 +295,10 @@ class TodoController extends Controller
 
         $commit->remove($todo);
         $commit->flush();
+        $this->addFlash(
+            'notice',
+            'delete To success'
+        );
         return $this->redirectToRoute('todo_list');
 
     }
