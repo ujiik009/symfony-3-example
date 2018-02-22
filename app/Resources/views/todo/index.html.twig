@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <table class="table">
+        <thead>
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Todo</th>
+            <th scope="col">Due Date</th>
+            <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for i in 0..10 %}            
+            <tr>
+                <th scope="row">{{ i+1 }}</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>
+                    <a href="/" class="btn btn-success">view</a>
+                    <a href="/" class="btn btn-default">edit</a>
+                    <a href="/" class="btn btn-danger">delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+            
+        </tbody>
+    </table>
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}
+{% block javascript %}
+    <script>
+        alert(1234);
+    </script>
+{% endblock %}
